@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 248 250 252; /* slate-50 */
+  --fg: 15 23 42; /* slate-900 */
+}
+
+.dark {
+  --bg: 2 6 23; /* slate-950 */
+  --fg: 226 232 240; /* slate-200 */
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-[rgb(var(--bg))] text-[rgb(var(--fg))] antialiased;
+}
+
+.container-prose {
+  @apply max-w-6xl mx-auto px-6;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-lg bg-primary-600 text-white px-5 py-3 font-medium shadow hover:bg-primary-700 transition;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-white/5 backdrop-blur px-5 py-3 font-medium hover:bg-white hover:dark:bg-slate-900 transition;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-white/[0.03] shadow-glass backdrop-blur-md;
+}
